@@ -52,7 +52,6 @@ export default (state, action) => {
           return contact.name.match(regex) || contact.email.match(regex);
         }),
       };
-
     case CLEAR_FILTER:
       return {
         ...state,

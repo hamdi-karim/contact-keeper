@@ -5,16 +5,15 @@ const ContactFilter = () => {
   const contactContext = useContext(ContactContext);
   const text = useRef("");
 
-  const { filterContacts, clearFilter, filtererd } = contactContext;
+  const { filterContacts, clearFilter, filtered } = contactContext;
 
-//   useEffect(() => {
-//     if (filtererd === null) {
-//       text.current.value = "";
-//     }
-//   });
+  useEffect(() => {
+    if (filtered === null) {
+      text.current.value = "";
+    }
+  });
 
   const onChange = (e) => {
-    console.log(e.target.value);
     if (text.current.value !== "") {
       filterContacts(e.target.value);
     } else {

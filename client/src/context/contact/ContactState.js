@@ -40,7 +40,7 @@ const ContactState = (props) => {
       },
     ],
     current: null,
-    filtererd: null,
+    filtered: null,
   };
 
   /** dispatch : to dispatch objects to the reducerS */
@@ -87,7 +87,7 @@ const ContactState = (props) => {
       value={{
         contacts: state.contacts,
         current: state.current,
-        filtererd: state.filtererd,
+        filtered: state.filtered,
         addContact,
         deleteContact,
         setCurrent,
